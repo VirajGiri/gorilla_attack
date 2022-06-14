@@ -1,0 +1,200 @@
+.container{
+    position: relative;
+    border: 1px solid black;
+    width: auto;
+    height: 90vh;
+
+}
+.runner{
+    height: 200px;
+    /* background-color: rgb(247, 9, 9); */
+    background-image: url("gorilla-king-kong-killing-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 180px;
+    bottom: 0px;
+    position: absolute;
+    left: 100px;
+    z-index: 9;
+    animation-duration: 2s;
+    animation-iteration-count: normal;
+    transform-origin: bottom;
+}
+.jump{
+    /* animation: mymove 2s normal;   */
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+.downkey{
+    height: 30px; 
+    transition: bottom 2s;
+}
+
+@keyframes mymove {
+    0% {
+        bottom: 0;
+      }
+      50% {
+        bottom: 100px;
+        transition: bottom 2s;
+      }
+      100% {
+        bottom: 0;    
+      }
+  }
+  @keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-200px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.objects{
+    height: 120px;
+    background-image: url("gorila\ run.gif");
+    width: 200px;
+    bottom: 0px;
+    right: -100px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    animation: run 5s infinite;
+}
+@keyframes run {
+    0% {
+        right: -30;
+        transition: right 5s;
+      }
+      50% {
+        right: 100%;
+        transition: right 5s;
+      }
+      100% {
+        right: 110%;
+        transition: right 5s;
+      }
+  }
+.game-over{
+    position: absolute;
+    visibility: hidden;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        margin-top: 50%;
+        height: 50vh;
+        width: 100vw;
+    }
+    .runner{
+        left: 10px;
+        height: 100px;
+        width: 100px;
+    }
+    .objects{
+        height: 60px;
+        width: 100px;
+    }
+    .game-over{
+    width: 50%;
+     height: auto;   
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        margin-top: 50%;
+        height: 50vh;
+        width: 100vw;
+    }
+    .runner{
+        left: 10px;
+        height: 100px;
+        width: 100px;
+    }
+    .objects{
+        height: 60px;
+        width: 100px;
+    }
+    .game-over{
+        width: 50%;
+        height: auto;   
+       }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container{
+        margin-top: 0;
+        width: auto;
+    height: 90vh;
+    }
+    .runner{
+        left: 10px;
+        height: 100px;
+        width: 100px;
+    }
+    .objects{
+        height: 60px;
+        width: 100px;
+    }
+    .game-over{
+     width: 100%;
+     height: auto;   
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container{
+        margin-top: 0;
+        width: auto;
+    height: 90vh;
+    }
+    .runner{
+        left: 100px;
+        height: 200px;
+        width: 180px;
+    }
+    .objects{
+        height: 120px;
+        width: 200px;
+    }
+    .game-over{
+        width: auto;
+        height: auto;    
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container{
+        margin-top: 0;
+        width: auto;
+    height: 90vh;
+    }
+    .runner{
+        left: 100px;
+        height: 200px;
+        width: 180px;
+    }
+    .objects{
+        height: 120px;
+        width: 200px;
+    }
+    .game-over{
+        width: auto;
+        height: auto;    
+    }
+}
