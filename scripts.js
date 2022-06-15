@@ -1,17 +1,21 @@
-
+window.onload = function(){
+var count = 000;
+document.getElementById('score').innerHTML = "Level: 1, Score: 000";
 function jump(){
     const runnerID = document.getElementById('runner');
-    const objectsID = document.getElementById('objects');
+    const objectID = document.getElementById('object');
     const gameoverID = document.getElementById('game-over');
     console.log("runner jump");
-    console.log(elementsOverlap(runnerID, objectsID)); // 👉️ true
-    if(elementsOverlap(runnerID, objectsID)){
-        objectsID.style.animationPlayState = 'paused';
+    console.log(elementsOverlap(runnerID, objectID)); // 👉️ true
+    if(elementsOverlap(runnerID, objectID)){
+        runnerID.style.animationPlayState = 'paused';
         gameoverID.style.visibility = "visible";
     }else{
-        document.getElementById('runner').classList.add("jump");
+        count++;
+        document.getElementById('object').classList.add("jump");
+        document.getElementById('score').innerHTML = "Level: 1, Score:" +count;
         setTimeout(res=>{
-            document.getElementById('runner').classList.remove("jump");
+            document.getElementById('object').classList.remove("jump");
         },3000);
     }
 }
@@ -48,3 +52,4 @@ function elementsOverlap(el1, el2) {
       domRect1.left > domRect2.right
     );
   }
+}

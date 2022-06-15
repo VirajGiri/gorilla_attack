@@ -10,11 +10,14 @@
         <link rel="stylesheet" href="style.css">
         <script src="scripts.js"></script>
     </head>
-    <body onclick="jump()">
+    <body class="game_body" onclick="jump()">
         <div class="container">
             <img id="game-over" class="game-over" src="wasted.gif">
+            <span id="object" class="object"></span>
             <span id="runner" class="runner"></span>
-            <span id="objects" class="objects"></span>
+        </div>
+        <div class="score_bord">
+            <h3 id="score"></h3>
         </div>
     </body>
 </html>

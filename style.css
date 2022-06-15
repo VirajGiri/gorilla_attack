@@ -1,18 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.game_body{
+    background-color: darkcyan;
+}
 .container{
     position: relative;
     border: 1px solid black;
     width: auto;
     height: 90vh;
+    background-image: url("forest-daytime-scene-with-various-forest-plant-tree_1308-58732.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
-.runner{
+.object{
     height: 200px;
-    /* background-color: rgb(247, 9, 9); */
     background-image: url("gorilla-king-kong-killing-removebg-preview.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 180px;
-    bottom: 0px;
+    bottom: 10px;
     position: absolute;
     left: 100px;
     z-index: 9;
@@ -29,7 +38,9 @@
     height: 30px; 
     transition: bottom 2s;
 }
-
+.score_bord{
+    background-color: aquamarine;
+}
 @keyframes mymove {
     0% {
         bottom: 0;
@@ -52,7 +63,7 @@
     100% { transform: scale(1,1)      translateY(0); }
 }
 
-.objects{
+.runner{
     height: 120px;
     background-image: url("gorila\ run.gif");
     width: 200px;
@@ -95,12 +106,12 @@
         height: 50vh;
         width: 100vw;
     }
-    .runner{
+    .object{
         left: 10px;
         height: 100px;
         width: 100px;
     }
-    .objects{
+    .runner{
         height: 60px;
         width: 100px;
     }
@@ -118,12 +129,12 @@
         height: 50vh;
         width: 100vw;
     }
-    .runner{
+    .object{
         left: 10px;
         height: 100px;
         width: 100px;
     }
-    .objects{
+    .runner{
         height: 60px;
         width: 100px;
     }
@@ -140,12 +151,12 @@
         width: auto;
     height: 90vh;
     }
-    .runner{
+    .object{
         left: 10px;
         height: 100px;
         width: 100px;
     }
-    .objects{
+    .runner{
         height: 60px;
         width: 100px;
     }
@@ -162,12 +173,12 @@
         width: auto;
     height: 90vh;
     }
-    .runner{
+    .object{
         left: 100px;
         height: 200px;
         width: 180px;
     }
-    .objects{
+    .runner{
         height: 120px;
         width: 200px;
     }
@@ -184,12 +195,12 @@
         width: auto;
     height: 90vh;
     }
-    .runner{
+    .object{
         left: 100px;
         height: 200px;
         width: 180px;
     }
-    .objects{
+    .runner{
         height: 120px;
         width: 200px;
     }
